@@ -10,5 +10,6 @@ def home():
 def about():
     return render_template('about.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Удалите этот блок для запуска с gunicorn
+# if __name__ == '__main__':
+#     app.run(debug=True)

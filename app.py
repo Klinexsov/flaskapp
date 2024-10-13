@@ -12,6 +12,7 @@ def home():
     logging.info(f'User IP: {user_ip}')  # Логируем IP-адрес
     return render_template('index.html')
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')

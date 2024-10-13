@@ -15,6 +15,7 @@ body {
     align-items: center;
 }
 
+/* Шапка */
 header {
     width: 100%;
     background: linear-gradient(90deg, #1d3557, #457b9d);
@@ -31,6 +32,13 @@ header .logo {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo i {
+    margin-right: 10px;
+    font-size: 28px;
 }
 
 header nav a {
@@ -115,7 +123,6 @@ header nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Анимация кнопок */
 .card button:active {
     transform: scale(0.98);
 }
@@ -130,85 +137,132 @@ header nav a:hover {
 }
 
 /* Кнопки социальных сетей */
-.social-buttons {
-    display: flex;
-    justify-content: center; /* Центрируем кнопки */
-    margin-top: 40px; /* Отступ сверху */
-    flex-wrap: wrap; /* Оборачиваем кнопки на новые строки при необходимости */
-}
-
-.social-button {
-    display: flex;
-    align-items: center;
-    border-radius: 50px; /* Полукруглая форма */
-    padding: 15px 25px; /* Увеличиваем отступы */
-    margin: 0 15px; /* Отступ между кнопками */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 18px; /* Увеличиваем размер шрифта */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Тень */
-    transition: background 0.3s, transform 0.3s; /* Анимация */
-}
-
-.social-button img {
-    width: 24px; /* Ширина иконок */
-    height: 24px; /* Высота иконок */
-    margin-right: 10px; /* Отступ между иконкой и текстом */
-}
-
 .social-container {
-    text-align: center; /* Центрирование текста */
-    margin-top: 40px; /* Отступ сверху */
+    text-align: center;
+    margin-top: 40px;
 }
 
 .social-buttons {
     display: flex;
-    justify-content: center; /* Центрируем кнопки */
-    margin-top: 20px; /* Отступ сверху */
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .social-btn {
     display: flex;
     align-items: center;
-    border-radius: 50px; /* Полукруглая форма */
-    padding: 15px 25px; /* Увеличиваем отступы */
-    margin: 0 15px; /* Отступ между кнопками */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 18px; /* Увеличиваем размер шрифта */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Тень */
-    transition: background 0.3s, transform 0.3s; /* Анимация */
+    border-radius: 50px;
+    padding: 15px 25px;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
 }
 
 .social-btn i {
-    margin-right: 10px; /* Отступ между иконкой и текстом */
+    margin-right: 10px;
 }
 
-/* Цвета кнопок */
 .vk {
-    background-color: #4A76A8; /* Цвет ВКонтакте */
-    color: white; /* Цвет текста */
+    background-color: #4A76A8;
+    color: white;
 }
 
 .vk:hover {
-    background-color: #0072B1; /* Более яркий цвет при наведении */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    background-color: #0072B1;
+    transform: scale(1.05);
 }
 
 .telegram {
-    background-color: #0088CC; /* Цвет Telegram */
-    color: white; /* Цвет текста */
+    background-color: #0088CC;
+    color: white;
 }
 
 .telegram:hover {
-    background-color: #0072A8; /* Более яркий цвет при наведении */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    background-color: #0072A8;
+    transform: scale(1.05);
 }
 
 .discord {
-    background-color: #7289DA; /* Цвет Discord */
-    color: white; /* Цвет текста */
+    background-color: #7289DA;
+    color: white;
 }
 
 .discord:hover {
-    background-color: #5B6E9E; /* Более яркий цвет при наведении */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    background-color: #5B6E9E;
+    transform: scale(1.05);
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #1d3557;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1d3557;
+}
+
+#enroll-button {
+    margin-top: 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#enroll-button:hover {
+    background-color: #d62828;
 }

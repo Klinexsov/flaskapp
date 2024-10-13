@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 @app.route('/')
 def home():
-    user_ip = request.remote_addr  # Получаем IP-адрес пользователя
+    user_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     logging.info(f'User IP: {user_ip}')  # Логируем IP-адрес
     return render_template('index.html')
 

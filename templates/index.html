@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Главная - Курсы{% endblock %}
+
+{% block content %}
+<h1>Изучайте лучшие курсы с нами!</h1>
+<p>Выберите курс и начните обучение уже сегодня.</p>
+
+<div class="cards-container">
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="Python">
+        <h2>Курс Python</h2>
+        <p>Изучите Python и начните карьеру в программировании.</p>
+        <button>Узнать больше</button>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="Веб-разработка">
+        <h2>Веб-разработка</h2>
+        <p>Создавайте сайты и веб-приложения за 30 дней.</p>
+        <button>Узнать больше</button>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="Data Science">
+        <h2>Data Science</h2>
+        <p>Анализируйте данные и создавайте ML-модели.</p>
+        <button>Узнать больше</button>
+    </div>
+</div>
+{% endblock %}
